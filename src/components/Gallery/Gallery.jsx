@@ -1,16 +1,34 @@
 
 import React from "react";
 import HornedBeast from "../HornedBeast/HornedBeast.jsx";
-import styles from './gallery.module.css'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
-function Gallery(){
+
+function Gallery(props) {
     return (
-        <div className={styles.gal}>
-            
-            <HornedBeast title= "UniWhal" imageUrl = "http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg" description = "A unicorn and a narwhal nuzzling their horns" keyword = "narwhal"/>
+        <>
+            <Container fluid>
+                <Row>
+                    
+                        {props.list.map((beast, index) => {
+                            return <Col  key={beast._id}>
+                                        <HornedBeast
+                                       
+                                        title={beast.title}
+                                        imageUrl={beast.image_url}
+                                        description={beast.description}
+                                        alt={beast.keyword}
+                                        />
+                                    </Col>
 
-            <HornedBeast title= "Rhino Family"  imageUrl = "https://images.unsplash.com/photo-1512636618879-bbe79107e9e3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd9460ee6d1ddbb6b1ca7be86dfc4590&auto=format&fit=crop&w=1825&q=80" description = "Parent rhino with two babies" keyword = "rhino"/>
-        </div>
+                        }
+                        )}
+                    
+                </Row>
+            </Container>
+        </>
     );
 }
 
