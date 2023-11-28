@@ -1,0 +1,11 @@
+.gal {
+    text-align: center;
+    background-color: aliceblue;
+}
+.gal img {
+    width: 500px;
+}
+
+.gal p {
+    font-size: 20px;
+}
