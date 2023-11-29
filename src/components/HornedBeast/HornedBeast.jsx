@@ -5,10 +5,8 @@ import Card from 'react-bootstrap/Card';
 
 function HornedBeast(props) {
 
-    const [vote, setVote] = useState(0);
-
-    function increment() {
-        setVote(vote + 1)
+    function vote(){
+        props.handleVote(props.title);
     }
 
     return (
@@ -20,7 +18,7 @@ function HornedBeast(props) {
                     <Card.Text>
                     {props.description}
                     </Card.Text>
-                    <Button onClick={increment} variant="primary">Like: {vote}</Button>
+                    <Button onClick={vote} variant="primary">Like: {props.votes}</Button>
                 </Card.Body>
             </Card>
         </>

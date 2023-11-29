@@ -20,6 +20,8 @@ function Gallery(props) {
                                         imageUrl={beast.image_url}
                                         description={beast.description}
                                         alt={beast.keyword}
+                                        votes={beast.votes}
+                                        handleVote = {props.handleVote}
                                         />
                                     </Col>
 
