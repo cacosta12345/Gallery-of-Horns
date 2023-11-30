@@ -9,8 +9,9 @@ import './app.css'
 
 
 function App(){
-
   const [beasties, setBeasties] = useState(database);
+  
+ 
 
   function voteFor(hornedBeast){
     let newBeasts = beasties.map((obj, index)=>{
@@ -25,8 +26,9 @@ function App(){
   return (
     <>
       <Header title = "Gallery of Horns"/>
-      <Gallery list = {beasties} handleVote={voteFor}/>
+      <Gallery list = {beasties} handleVote={voteFor} />
       <Footer/>
+      
     </>
   )
 }
