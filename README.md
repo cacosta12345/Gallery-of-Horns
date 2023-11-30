@@ -21,6 +21,6 @@ Estimate of time needed to complete:
 
 Start time: 2:00pm
 
-Finish time: tbd
+Finish time: 4:11
 
-Actual time needed to complete: tbd
+Actual time needed to complete: 2 hours and 10 min
