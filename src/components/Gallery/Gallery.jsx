@@ -6,26 +6,30 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 
+
 function Gallery(props) {
     return (
         <>
             <Container fluid>
                 <Row>
-                    
-                        {props.list.map((beast, index) => {
-                            return <Col  key={beast._id}>
-                                        <HornedBeast
-                                       
+
+                    {props.list.map((beast, index) => {
+                        return <Col key={beast._id}>
+                                    <HornedBeast
+
                                         title={beast.title}
                                         imageUrl={beast.image_url}
                                         description={beast.description}
                                         alt={beast.keyword}
-                                        />
-                                    </Col>
+                                        votes={beast.votes}
+                                        handleVote={props.handleVote}
+                                        
+                                    />
+                                  
+                        </Col>
+                    }
+                    )}
 
-                        }
-                        )}
-                    
                 </Row>
             </Container>
         </>
